@@ -1,11 +1,11 @@
 # find twin prime between 1 thousand to 1 million
 # figure out whether a integer is a prime number
-def isPrime(n):
-    if n == 2 or n == 3: return True
-    if n%2==0 or n<2: return False
-    for i in range(3,int(n**0.5)+1,2):
-        if n%i==0:
-            return False
+def isPrime(n):                          # figure out whether a integer is a prime number
+    if n == 2 or n == 3: return True     # 2 and 3 are prime numbers
+    if n%2==0 or n<2: return False       # even numbers are not prime numbers
+    for i in range(3,int(n**0.5)+1,2):   # as even numbers are not prime numbers, here only consider odd numbers
+        if n%i==0:                       # if a number can be divided by another number in the range of 3 to root n, 
+            return False                 # it is not a prime number
     return True
 # figure out whether twin integers are twin primes
 def isTwinPrime(n):
